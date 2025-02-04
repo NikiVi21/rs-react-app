@@ -2,6 +2,12 @@
   margin-top: 20px;
   border-collapse: collapse;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
 }
 
 .resultsTable table {
@@ -26,4 +32,21 @@
 
 .resultsTable tr:hover {
   background-color: #ddd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh;
+}
+
+.notFoundTitle {
+  font-size: 6rem;
+  margin: 0;
+}
+.notFoundMessage {
+  font-size: 1.5rem;
 }

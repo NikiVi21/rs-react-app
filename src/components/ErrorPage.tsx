@@ -1,4 +1,5 @@
 import { Component } from "react";
+import styles from "./Results/Results.module.css";
 
 interface ErrorPageProps {
   message: string;
@@ -11,9 +12,9 @@ class ErrorPage extends Component<ErrorPageProps> {
     const { message } = this.props;
 
     return (
-      <div>
+      <div className={styles.container}>
         <p>{message}</p>
-        <p>Error error</p>
+        <p>ErrorBoundary page</p>
         <a href={""}>Back</a>
       </div>
     );

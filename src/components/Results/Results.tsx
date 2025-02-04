@@ -18,8 +18,8 @@ export class Results extends Component<ResultsComponentProps> {
 
     return (
       <div className={styles.resultsTable}>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
+        {loading && <p className={styles.container}>Loading...</p>}
+        {error && <p className={styles.container}>Error: {error}</p>}
         {!loading && !error && repositories.length > 0 ? (
           <table>
             <thead>
@@ -38,7 +38,13 @@ export class Results extends Component<ResultsComponentProps> {
             </tbody>
           </table>
         ) : (
-          !loading && !error && <div>NO</div>
+          !loading &&
+          !error && (
+            <div className={styles.container}>
+              <h1 className={styles.notFoundTitle}>404</h1>
+              <p className={styles.notFoundMessage}>Not found</p>
+            </div>
+          )
         )}
       </div>
     );
