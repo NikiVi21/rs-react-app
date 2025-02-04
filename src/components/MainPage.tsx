@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Search from "./TopControls/Search/Search";
 import { Results } from "./Results/Results";
+import styles from "../index.module.css";
 
 interface MainPageComponentState {
   repositories: [];
@@ -65,7 +66,9 @@ class MainPage extends Component<object, MainPageComponentState> {
           ></Results>
         </main>
         <footer>
-          <button onClick={this.onError.bind(this)}>Error Button</button>
+          <button className={styles.button} onClick={this.onError.bind(this)}>
+            Error Button
+          </button>
         </footer>
       </div>
     );

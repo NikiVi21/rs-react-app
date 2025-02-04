@@ -1,4 +1,5 @@
 import { Component, ChangeEvent } from "react";
+import styles from "../../../index.module.css";
 
 interface SearchComponentState {
   query: string;
@@ -53,7 +54,11 @@ export default class Search extends Component<
           value={this.state.query}
           placeholder="User"
         />
-        <button onClick={this.handleSearch} disabled={loading}>
+        <button
+          className={styles.button}
+          onClick={this.handleSearch}
+          disabled={loading}
+        >
           {loading ? "Loading..." : "Search"}
         </button>
       </div>
